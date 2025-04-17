@@ -1,8 +1,7 @@
+/* Ensure full width layout */
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  width: 100%;
+  min-height: 100vh;
 }
 
 .logo {
@@ -33,10 +32,14 @@
   }
 }
 
+/* Base card styles - these will be overridden by MUI styles */
 .card {
   padding: 2em;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .read-the-docs {
-  color: #888;
+  color: #666;
 }

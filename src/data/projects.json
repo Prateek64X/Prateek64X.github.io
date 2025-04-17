@@ -1,0 +1,64 @@
+[
+    {
+      "name": "GeoViz (Unreal Engine)",
+      "description": "AR app for collaborative architectural design and visualization, using Google Maps API and Google Cloud. Geospatial Creator Challenge - Most productive AR application.",
+      "date": "2023-05",
+      "images": [
+        "/images/geoviz1.png",
+        "/images/geoviz2.png",
+        "/images/geoviz3.png",
+        "/images/geoviz4.png"
+      ],
+      "technologies": ["Unreal", "Google Maps", "Google Cloud"],
+      "tags": ["AR/VR", "Tools"]
+    },
+    {
+      "name": "Digi Yoga (Unreal Engine)",
+      "description": "VR yoga app with body tracking, multiplayer yoga sessions, and digital avatars performing in virtual environments.",
+      "date": "2023-08",
+      "images": [
+        "/images/digiyoga1.png",
+        "/images/digiyoga2.png",
+        "/images/digiyoga3.png",
+        "/images/digiyoga4.png"
+      ],
+      "technologies": ["Unreal", "VR"],
+      "tags": ["AR/VR", "Unreal Engine", "Tools", "Games"]
+    },
+    {
+      "name": "Sky Runner (Unity 3D)",
+      "description": "3D FPS mobile platform game inspired from Tron Legacy. Contributed to level design and programming gameplay mechanics.",
+      "date": "2023-02",
+      "images": [
+        "/images/skyrunner1.png",
+        "/images/skyrunner2.png"
+      ],
+      "technologies": ["Unity", "Blender", "C#"],
+      "tags": ["Unity", "Games", "Mobile"]
+    },
+    {
+      "name": "Squares (Unity 3D)",
+      "description": "2D multiplayer tile game. Developed gameplay mechanics, multiplayer functionality and assets.",
+      "date": "2022-11",
+      "images": [
+        "/images/squares1.png",
+        "/images/squares2.png",
+        "/images/squares3.png"
+      ],
+      "technologies": ["Unity", "After Effects"],
+      "tags": ["Unity", "Games", "Mobile"]
+    },
+    {
+      "name": "TeamGlobe (Flutter)",
+      "description": "Developed games to help reach Global Sustainability Goals using Flutter.",
+      "date": "2023-10",
+      "images": [
+        "/images/teamglobe1.png",
+        "/images/teamglobe2.png",
+        "/images/teamglobe3.png",
+        "/images/teamglobe4.png"
+      ],
+      "technologies": ["Flutter", "Unity"],
+      "tags": ["Flutter", "Games", "Mobile"]
+    }
+  ]
