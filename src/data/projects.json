@@ -10,7 +10,8 @@
         "/images/geoviz4.png"
       ],
       "technologies": ["Unreal", "Google Maps", "Google Cloud"],
-      "tags": ["AR/VR", "Tools"]
+      "tags": ["AR/VR", "Tools"],
+      "link": "https://devpost.com/software/geoviz"
     },
     {
       "name": "Digi Yoga (Unreal Engine)",
@@ -23,7 +24,9 @@
         "/images/digiyoga4.png"
       ],
       "technologies": ["Unreal", "VR"],
-      "tags": ["AR/VR", "Unreal Engine", "Tools", "Games"]
+      "tags": ["AR/VR", "Unreal Engine", "Tools", "Games"],
+      "link": "https://drive.google.com/file/d/1mZAN7Ve29Hbg2wH_xC0khozZ3386F-Ug/view?usp=sharing",
+      "video": "https://www.youtube.com/watch?v=jTSd9u1C-YQ"
     },
     {
       "name": "Sky Runner (Unity 3D)",
@@ -34,7 +37,8 @@
         "/images/skyrunner2.png"
       ],
       "technologies": ["Unity", "Blender", "C#"],
-      "tags": ["Unity", "Games", "Mobile"]
+      "tags": ["Unity", "Games", "Mobile"],
+      "video": "https://www.youtube.com/watch?v=KotqxfErzA4"
     },
     {
       "name": "Squares (Unity 3D)",
@@ -59,6 +63,8 @@
         "/images/teamglobe4.png"
       ],
       "technologies": ["Flutter", "Unity"],
-      "tags": ["Flutter", "Games", "Mobile"]
+      "tags": ["Flutter", "Games", "Mobile"],
+      "link": "https://devpost.com/software/teamglobe",
+      "video": "https://www.youtube.com/watch?v=M_nln8Et7JA"
     }
   ]

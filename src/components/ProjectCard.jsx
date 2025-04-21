@@ -5,6 +5,7 @@ import {
   Box,
   Avatar,
   Tooltip,
+  Button
 } from '@mui/material';
 import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
@@ -34,6 +35,7 @@ import { SiGooglemaps } from "react-icons/si";
 import { SiAdobeaftereffects } from "react-icons/si";
 import { SiDocker } from "react-icons/si";
 import { SiBlender } from "react-icons/si";
+import { MdPlayCircleOutline, MdOpenInNew } from 'react-icons/md';
 
 const technologyIcons = {
   'Unity': <FaUnity />,
@@ -64,8 +66,8 @@ export default function ProjectCard({ project }) {
   return (
     <Card
       sx={{
-        backdropFilter: 'blur(16px)',
-        backgroundColor: 'rgba(255, 255, 255, 0.7)',
+        backdropFilter: 'blur(24px)',
+        backgroundColor: 'rgba(255, 255, 255, 0.6)',
         borderRadius: 4,
         overflow: 'hidden',
         boxShadow: 'none',
@@ -79,7 +81,7 @@ export default function ProjectCard({ project }) {
         '&:hover': {
           transform: 'translateY(-4px)',
           boxShadow: '0 10px 20px rgba(0, 0, 0, 0.1)',
-          backgroundColor: 'rgba(255, 255, 255, 0.9)',
+          backgroundColor: 'rgba(255, 255, 255, 0.8)',
           borderColor: 'rgba(0, 0, 0, 0.2)',
           '& .swiper-button-next, & .swiper-button-prev': {
             opacity: 1,
@@ -223,6 +225,30 @@ export default function ProjectCard({ project }) {
             ))}
           </Box>
         )}
+
+        <Box mt={2} display="flex" justifyContent="flex-end" gap={1}>
+          {project.video && (
+            <Button
+              variant="contained"
+              color="primary"
+              startIcon={<MdPlayCircleOutline size={16} />}
+              onClick={() => window.dispatchEvent(new CustomEvent('openLinkBrowser', { detail: project.video }))}
+            >
+              Watch
+            </Button>
+          )}
+          {project.link && (
+            <Button
+              variant="contained"
+              color="success"
+              startIcon={<MdOpenInNew size={14} />}
+              onClick={() => window.dispatchEvent(new CustomEvent('openLinkBrowser', { detail: project.link }))}
+            >
+              Visit
+            </Button>
+          )}
+        </Box>
+
       </CardContent>
     </Card>
   );

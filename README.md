@@ -26,5 +26,21 @@ A modern, responsive personal portfolio website built with React.js, Node.js, an
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/portfolio.git
+   git clone https://github.com/Prateek64X/Prateek64X.git
    cd portfolio
+
+2. Install using the following command:
+  ```bash
+  pnpm install
+  # or
+  npm install
+  # or
+  yarn install
+
+3. Run using the following command:
+  ```bash
+  pnpm start
+  # or
+  npm start
+  # or
+  yarn start

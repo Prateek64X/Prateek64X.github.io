@@ -76,7 +76,8 @@ export default function Navbar() {
               onClick={() => setDrawerOpen(false)}
               sx={{
                 px: 3,
-                py: 1.5,
+                py: 1,
+                my: 0.5,
                 borderRadius: 2,
                 color: isActive ? 'white' : 'rgba(255, 255, 255, 0.3)',
                 backgroundColor: isActive ? 'rgba(255, 255, 255, 0.05)' : 'transparent',
@@ -167,6 +168,9 @@ export default function Navbar() {
               transform: (!showFullNav || isMobile) ? 'translateX(0)' : 'translateX(-20px)',
               transition: 'opacity 300ms ease, transform 300ms ease',
               pointerEvents: (!showFullNav || isMobile) ? 'auto' : 'none',
+              '&:hover': {
+                bgcolor: 'rgba(0, 0, 0, 0.15)',
+              },
             }}
           >
             {drawerOpen ? <CloseIcon sx={{ color: 'white' }} /> : <MenuIcon sx={{ color: 'white' }} />}
