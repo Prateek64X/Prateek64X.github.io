@@ -1,0 +1,49 @@
+{
+  "experience": [
+    {
+      "company": "Yadara LLC",
+      "role": "Junior Software Assurance Engineer",
+      "duration": "Oct 2024 - Present",
+      "description": "Building full-stack solutions with React.js and Node.js for MyTicketPOS, a live concert ticket marketplace."
+    },
+    {
+      "company": "App Cake",
+      "role": "Application Developer",
+      "duration": "Jul 2024 - Oct 2024",
+      "description": "Designed and developed native iOS applications using Xcode, Swift, and Figma with a focus on user experience."
+    },
+    {
+      "company": "Volvo Eicher Commercial Vehicles",
+      "role": "Software Development Intern",
+      "duration": "Nov 2023 - Jul 2024",
+      "description": "Enhanced the Incident Management System and developed PLM solutions using Java and Dassault Systèmes 3DEXPERIENCE platform."
+    }
+  ],
+  "skills": {
+    "Web": ["React", "Node.js", "Next.js", "Java", "PostgreSQL", "Google Cloud", "AWS"],
+    "AR/VR & Game": ["Unity", "Unreal Engine", "Blender"],
+    "Mobile": ["Flutter", "Xcode", "Swift"]
+  },
+  "awards": [
+    {
+      "award": "National Winner II",
+      "organization": "All India University Anveshan",
+      "date": "Feb 2024"
+    },
+    {
+      "award": "Winner - Best AR Productivity & Business App",
+      "organization": "Google’s Immersive Geospatial Challenge",
+      "date": "Nov 2023"
+    },
+    {
+      "award": "Finalist",
+      "organization": "EY Techathon 3.0",
+      "date": "March 2023"
+    },
+    {
+      "award": "International Winner",
+      "organization": "Microsoft PyGames",
+      "date": "May 2022"
+    }
+  ]
+}

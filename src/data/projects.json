@@ -1,6 +1,6 @@
 [
     {
-      "name": "GeoViz (Unreal Engine)",
+      "name": "GeoViz (AR)",
       "description": "AR app for collaborative architectural design and visualization, using Google Maps API and Google Cloud. Geospatial Creator Challenge - Most productive AR application.",
       "date": "2023-05",
       "images": [
@@ -9,9 +9,11 @@
         "/images/geoviz3.png",
         "/images/geoviz4.png"
       ],
-      "technologies": ["Unreal", "Google Maps", "Google Cloud"],
+      "technologies": ["Unity", "Google Maps", "Google Cloud"],
       "tags": ["AR/VR", "Tools"],
-      "link": "https://devpost.com/software/geoviz"
+      "link": "https://devpost.com/software/geoviz",
+      "Achievement": "Winner - Google's Geospatial Creator Challenge",
+      "featured": true
     },
     {
       "name": "Digi Yoga (Unreal Engine)",
@@ -24,20 +26,22 @@
         "/images/digiyoga4.png"
       ],
       "technologies": ["Unreal", "VR"],
-      "tags": ["AR/VR", "Unreal Engine", "Tools", "Games"],
+      "tags": ["AR/VR", "Tools", "Games"],
       "link": "https://drive.google.com/file/d/1mZAN7Ve29Hbg2wH_xC0khozZ3386F-Ug/view?usp=sharing",
-      "video": "https://www.youtube.com/watch?v=jTSd9u1C-YQ"
+      "video": "https://www.youtube.com/watch?v=jTSd9u1C-YQ",
+      "Achievement": "EY Techathon 3.0 Finalist",
+      "featured": true
     },
     {
       "name": "Sky Runner (Unity 3D)",
-      "description": "3D FPS mobile platform game inspired from Tron Legacy. Contributed to level design and programming gameplay mechanics.",
+      "description": "3D FPS mobile apps platform game inspired from Tron Legacy. Contributed to level design and programming gameplay mechanics.",
       "date": "2023-02",
       "images": [
         "/images/skyrunner1.png",
         "/images/skyrunner2.png"
       ],
       "technologies": ["Unity", "Blender", "C#"],
-      "tags": ["Unity", "Games", "Mobile"],
+      "tags": ["Games", "Mobile Apps"],
       "video": "https://www.youtube.com/watch?v=KotqxfErzA4"
     },
     {
@@ -50,7 +54,7 @@
         "/images/squares3.png"
       ],
       "technologies": ["Unity", "After Effects"],
-      "tags": ["Unity", "Games", "Mobile"]
+      "tags": ["Games", "Mobile Apps"]
     },
     {
       "name": "TeamGlobe (Flutter)",
@@ -63,8 +67,23 @@
         "/images/teamglobe4.png"
       ],
       "technologies": ["Flutter", "Unity"],
-      "tags": ["Flutter", "Games", "Mobile"],
+      "tags": ["Games", "Mobile Apps"],
       "link": "https://devpost.com/software/teamglobe",
-      "video": "https://www.youtube.com/watch?v=M_nln8Et7JA"
+      "video": "https://www.youtube.com/watch?v=M_nln8Et7JA",
+      "featured": true
+    },
+    {
+      "name": "Event Assistant",
+      "description": "Unified university events in one app. Track upcoming events, star and join events in-app. Boosting students participation and campus engagement.",
+      "date": "2023-10",
+      "images": [
+        "/images/eventassistant1.png",
+        "/images/eventassistant2.png",
+        "/images/eventassistant3.png"
+      ],
+      "technologies": ["Flutter", "Xcode"],
+      "tags": ["Mobile Apps"],
+      "link": "https://www.canva.com/design/DAGndEWQ_m8/mS3rSIW3P38ndY1j02PFZg/edit?utm_content=DAGndEWQ_m8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
+      "featured": true
     }
   ]

@@ -1,64 +1,140 @@
-// src/pages/Portfolio.jsx
-import { useState } from 'react';
-import {
-  Grid,
-  Typography,
-  Box,
-  FormControl,
-  InputLabel,
-  Select,
-  MenuItem,
-  Container,
-} from '@mui/material';
-import projects from '../data/projects.json';
-import ProjectCard from '../components/ProjectCard';
+import React from 'react';
+import SkillsSection from '../components/SkillsSection';
+import ExperienceSection from '../components/ExperienceSection';
+import AchievementsSection from '../components/AchievementsSection';
+import { FeaturedProjects } from '../components/ProjectCard';
+import Footer from '../components/Footer';
+import { Box, Container, Typography, Avatar, useTheme } from '@mui/material';
 
-export default function Portfolio() {
-  const [filter, setFilter] = useState('All');
 
-  const filteredProjects =
-    filter === 'All' ? projects : projects.filter((p) => p.tags.includes(filter));
+const Section = ({ title, children, id }) => (
+  <Box 
+    id={id}
+    component="section" 
+    sx={{ 
+      py: { xs: 2, md: 2 },
+      borderBottom: '1px solid',
+      borderColor: 'divider',
+      '&:last-child': {
+        borderBottom: 'none'
+      }
+    }}
+  >
+    <Container maxWidth="lg" sx={{ pt: 2, pb: 4 }}>
+      {title && (
+        <Typography 
+          variant="h4" 
+          component="h2" 
+          fontWeight="bold" 
+          gutterBottom
+          sx={{ mb: 4 }}
+        >
+          {title}
+        </Typography>
+      )}
+      {children}
+    </Container>
+  </Box>
+);
 
-  const uniqueTags = Array.from(new Set(projects.flatMap((p) => p.tags || [])));
+const Portfolio = () => {
+  const theme = useTheme();
 
   return (
-    <Container maxWidth="lg" sx={{ pt: 4, pb: 6 }}>
-      <Box display="flex" justifyContent="space-between" alignItems="center" ml={4} mr={4} mb={4} flexWrap="wrap" gap={2}>
-        <Typography variant="h4" fontWeight="bold">
-          My Projects
-        </Typography>
-        <FormControl size="small" sx={{ minWidth: 160 }}>
-          <InputLabel>Category</InputLabel>
-          <Select
-            value={filter}
-            label="Category"
-            onChange={(e) => setFilter(e.target.value)}
-          >
-            <MenuItem value="All">All</MenuItem>
-            {uniqueTags.map((tag) => (
-              <MenuItem key={tag} value={tag}>
-                {tag}
-              </MenuItem>
-            ))}
-          </Select>
-        </FormControl>
-      </Box>
-
-      <Grid container spacing={2} sx={{
-        display: 'flex',
-        flexWrap: 'wrap',
-        justifyContent: 'center'
-      }}>
-        {filteredProjects.map((project) => (
-          <Grid item xs={12} sm={6} md={6} key={project.name} sx={{
+    <Box sx={{ pt: 2 }}>
+      {/* Hero/About Section */}
+      <Section id="about">
+        <Container maxWidth="lg" sx={{ 
+          display: 'flex',
+          justifyContent: 'center',
+          pt: 4,
+          ml: 2,
+        }}>
+          <Box sx={{ 
             display: 'flex',
-            minWidth: { sm: 'calc(50% - 32px)', md: 'calc(50% - 32px)' }, // Accounts for spacing
-            maxWidth: { sm: 'calc(50% - 32px)', md: 'calc(50% - 32px)' },
+            flexDirection: { xs: 'column', md: 'row' },
+            alignItems: 'center',
+            gap: 4,
+            maxWidth: '1200px',
+            width: '90%',
+            backdropFilter: 'blur(2px)',
+            borderRadius: 4,
+            px: 3,
+            py: -2,
+            mx: { xs: 'auto', md: 0 },
           }}>
-            <ProjectCard project={project} />
-          </Grid>
-        ))}
-      </Grid>
-    </Container>
+            <Avatar
+              src="../../public/images/ProfilePhoto.jpg"
+              sx={{ 
+                width: { xs: 120, md: 160 }, 
+                height: { xs: 120, md: 160 },
+                border: `4px solid rgba(255, 255, 255, 0.2)`,
+                boxShadow: '0 10px 20px rgba(0, 0, 0, 0.1)',
+                flexShrink: 0
+              }}
+            />
+            
+            <Box sx={{ 
+              textAlign: { xs: 'center', md: 'left' },
+              flex: 1
+            }}>
+              <Typography variant="h4" component="h1" fontWeight="bold" marginBottom={'2pt'}>
+                Prateek Panwar
+              </Typography>
+              <Typography 
+                variant="h6" 
+                color="primary.main"
+                sx={{ 
+                  mb: 2,
+                  background: `linear-gradient(45deg, ${theme.palette.primary.main}, ${theme.palette.secondary.main})`,
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  display: 'inline-block'
+                }}
+              >
+                Full-Stack Web Developer | AR/VR Experiences | Mobile Developer
+              </Typography>
+              
+              <Typography 
+                variant="body1" 
+                paragraph 
+                sx={{ 
+                  maxWidth: '700px',
+                  lineHeight: 1.8,
+                  fontSize: '1.1rem',
+                  fontWeight: 500,
+                  mx: { xs: 'auto', md: 0 }
+                }}
+              >
+                Hi, I’m skilled in building full‑stack web applications with React.js, Node.js and Java.
+                I enjoy creating immersive AR/VR and architectural visualizations using Unity 3D and Unreal Engine.
+                I also develop mobile applications using Flutter and Swift. My strength lies in integrating diverse technologies to build 
+                intuitive, scalable, and future-ready digital products.
+              </Typography>
+            </Box>
+          </Box>
+        </Container>
+      </Section>
+
+      <Section title="Skills" id="skills">
+        <SkillsSection />
+      </Section>
+
+      <Section title="Experience" id="experience">
+        <ExperienceSection />
+      </Section>
+
+      <Section title="Featured Projects" id="projects">
+        <FeaturedProjects />
+      </Section>
+
+      <Section title="Awards & Achievements" id="achievements">
+        <AchievementsSection />
+      </Section>
+
+      <Footer />
+    </Box>
   );
-}
+};
+
+export default Portfolio;

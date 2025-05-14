@@ -5,60 +5,18 @@ import {
   Box,
   Avatar,
   Tooltip,
-  Button
+  Button,
+  Chip
 } from '@mui/material';
 import { Swiper, SwiperSlide } from 'swiper/react';
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Navigation, Pagination } from 'swiper/modules';
-
-// React Icons
-import { FaUnity } from "react-icons/fa6";
-import { SiUnrealengine } from "react-icons/si";
-import { FaReact } from "react-icons/fa";
-import { FaNodeJs } from "react-icons/fa";
-import { SiJavascript } from "react-icons/si";
-import { TbBrandCSharp } from "react-icons/tb";
-import { BsBadgeVrFill } from "react-icons/bs";
-import { SiSocketdotio } from "react-icons/si";
-import { SiMongodb } from "react-icons/si";
-import { SiNextdotjs } from "react-icons/si";
-import { FaJava } from "react-icons/fa6";
-import { SiHtml5 } from "react-icons/si";
-import { SiCss3 } from "react-icons/si";
-import { SiFlutter } from "react-icons/si";
-import { SiSwift } from "react-icons/si";
-import { SiGooglecloud } from "react-icons/si";
-import { SiGooglemaps } from "react-icons/si";
-import { SiAdobeaftereffects } from "react-icons/si";
-import { SiDocker } from "react-icons/si";
-import { SiBlender } from "react-icons/si";
+import { technologyIcons } from '../utils/technologyIcons';
 import { MdPlayCircleOutline, MdOpenInNew } from 'react-icons/md';
-
-const technologyIcons = {
-  'Unity': <FaUnity />,
-  'Unreal': <SiUnrealengine />,
-  'Blender': <SiBlender />,
-  'After Effects': <SiAdobeaftereffects />,
-  'React': <FaReact />,
-  'Node.js': <FaNodeJs />,
-  'Next.js': <SiNextdotjs />,
-  'JavaScript': <SiJavascript />,
-  'HTML': <SiHtml5 />,
-  'CSS': <SiCss3 />,
-  'Socket.IO': <SiSocketdotio />,
-  'C#': <TbBrandCSharp />,
-  'Java': <FaJava />,
-  'Swift': <SiSwift />,
-  'Flutter': <SiFlutter />,
-  'VR': <BsBadgeVrFill />,
-  'MongoDB': <SiMongodb />,
-  'Google Cloud': <SiGooglecloud />,
-  'Google Maps': <SiGooglemaps />,
-  'Docker': <SiDocker />,
-};
+import { FaTrophy } from "react-icons/fa";
+import projectsData from '../data/projects.json';
 
 export default function ProjectCard({ project }) {
   const hasImages = Array.isArray(project.images) && project.images.length > 0;
@@ -76,7 +34,7 @@ export default function ProjectCard({ project }) {
         height: '100%',
         display: 'flex',
         flexDirection: 'column',
-        border: '1px solid rgba(0, 0, 0, 0.1)',
+        border: '1px solid rgba(100, 100, 100, 0.1)',
         transition: 'all 0.3s ease',
         '&:hover': {
           transform: 'translateY(-4px)',
@@ -202,8 +160,37 @@ export default function ProjectCard({ project }) {
           {project.description}
         </Typography>
 
-        {project.technologies && project.technologies.length > 0 && (
-          <Box display="flex" gap={1} mt={2} flexWrap="wrap">
+        {/* Achievement Chip (Left Side) */}
+        {project.Achievement ? (
+            <Chip
+              icon={<FaTrophy size={14} />}
+              label={project.Achievement}
+              size="medium"
+              sx={{
+                backgroundColor: '#d1a332',
+                color: 'rgba(255, 255, 255, 0.9)', // Dark text
+                fontWeight: 'bold',
+                marginTop: '8px',
+                border: '1px solid rgba(0, 0, 0, 0.1)',
+                '& .MuiChip-icon': {
+                  color: 'inherit',
+                  marginLeft: '8px',
+                  marginRight: '-4px'
+                }
+              }}
+            />
+          ) : (
+          <Box /> // Empty Box to maintain space-between layout if no achievement
+        )}
+        <Box
+          mt={1}
+          display="flex"
+          justifyContent="space-between" // Pushes chip left, buttons right
+          alignItems="center" // Vertically aligns chip and buttons
+          gap={1} // Adds space if they get close on small screens
+        >
+          {project.technologies && project.technologies.length > 0 && (
+          <Box display="flex" gap={1} flexWrap="wrap">
             {project.technologies.map((tech, idx) => (
               <Tooltip key={idx} title={tech} arrow>
                 <Avatar
@@ -226,30 +213,57 @@ export default function ProjectCard({ project }) {
           </Box>
         )}
 
-        <Box mt={2} display="flex" justifyContent="flex-end" gap={1}>
-          {project.video && (
-            <Button
-              variant="contained"
-              color="primary"
-              startIcon={<MdPlayCircleOutline size={16} />}
-              onClick={() => window.dispatchEvent(new CustomEvent('openLinkBrowser', { detail: project.video }))}
-            >
-              Watch
-            </Button>
-          )}
-          {project.link && (
-            <Button
-              variant="contained"
-              color="success"
-              startIcon={<MdOpenInNew size={14} />}
-              onClick={() => window.dispatchEvent(new CustomEvent('openLinkBrowser', { detail: project.link }))}
-            >
-              Visit
-            </Button>
-          )}
+          {/* Buttons Container (Right Side) */}
+          <Box display="flex" gap={1}>
+            {project.video && (
+              <Button
+                variant="contained"
+                color="primary"
+                size="small" // Optional: make buttons smaller to match chip size
+                startIcon={<MdPlayCircleOutline size={16} />}
+                onClick={() => window.dispatchEvent(new CustomEvent('openLinkBrowser', { detail: project.video }))}
+              >
+                Watch
+              </Button>
+            )}
+            {project.link && (
+              <Button
+                variant="contained"
+                color="success"
+                size="small" // Optional: make buttons smaller to match chip size
+                startIcon={<MdOpenInNew size={14} />}
+                onClick={() => window.dispatchEvent(new CustomEvent('openLinkBrowser', { detail: project.link }))}
+              >
+                Visit
+              </Button>
+            )}
+          </Box>
         </Box>
 
       </CardContent>
     </Card>
+  );
+}
+
+// Displays 3 cards horizontal of featured projects
+export function FeaturedProjects() {
+  const featuredProjects = projectsData.filter(p => p.featured);
+
+  return (
+    <Box sx={{ width: '100%', height: '70%', mt: 2, mx: 'auto' }}>
+      <Swiper
+        modules={[Navigation]}
+        navigation
+        spaceBetween={20}
+        slidesPerView={3}
+        style={{ padding: '20px' }}
+      >
+        {featuredProjects.map((project, idx) => (
+          <SwiperSlide key={idx}>
+            <ProjectCard project={project} />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </Box>
   );
 }

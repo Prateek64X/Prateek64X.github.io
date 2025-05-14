@@ -46,7 +46,7 @@ export default function Navbar() {
   const links = [
     { text: 'Home', icon: <HomeIcon /> },
     { text: 'Portfolio', icon: <DashboardCustomizeIcon /> },
-    { text: 'Contact', icon: <ContactMailIcon /> },
+    { text: 'Projects', icon: <DashboardCustomizeIcon /> },
   ];
 
   const navContent = (
@@ -120,7 +120,7 @@ export default function Navbar() {
           }}
         >
           <Toolbar sx={{ justifyContent: 'space-between' }}>
-            <Box sx={{ fontWeight: 'bold' }}>My Portfolio - Prateek Panwar</Box>
+            <Box sx={{ fontWeight: 'bold', color:'white' }}>My Portfolio - Prateek Panwar</Box>
             <Box>
               {links.map((link) => {
                 const path = link.text === 'Home' ? '/' : `/${link.text.toLowerCase()}`;

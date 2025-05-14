@@ -2,15 +2,19 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Portfolio from './pages/Portfolio';
+import Projects from './pages/Projects';
 import LinkBrowser from './components/LinkBrowser';
 import { Box } from '@mui/material';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
-import backgroundImg from '../public/images/background.jpg';
+import backgroundImg from '/images/background.jpg';
 
 const lightTheme = createTheme({
   palette: {
     mode: 'light',
+    primary: {
+      main: '#7ab2e9',
+    },
     background: {
       default: '#f5f5f5',
       paper: '#ffffff',
@@ -85,6 +89,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/projects" element={<Projects />} />
           </Routes>
         </div>
       </Router>
