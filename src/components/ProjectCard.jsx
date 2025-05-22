@@ -474,8 +474,8 @@ export function FeaturedProjects() {
       >
         <Tooltip title="View all projects" arrow>
           <Button
-            component="a"
-            href="/projects"
+            component={Link}
+            to="/projects"
             size="small"
             sx={{
               p: "6px 12px",
