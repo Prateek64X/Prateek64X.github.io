@@ -80,7 +80,7 @@ const Portfolio = () => {
           >
             {/* Profile Image */}
             <Avatar
-              src="../../public/images/ProfilePhoto.jpg"
+              src="/images/ProfilePhoto.jpg"
               sx={{
                 width: { xs: 120, md: 160 },
                 height: { xs: 120, md: 160 },
