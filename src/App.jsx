@@ -1,9 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ScrollToTop from './components/ScrollToTop';
 import Navbar from './components/Navbar';
+import LinkBrowser from './components/LinkBrowser';
 import Home from './pages/Home';
 import Portfolio from './pages/Portfolio';
 import Projects from './pages/Projects';
-import LinkBrowser from './components/LinkBrowser';
 import { Box } from '@mui/material';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -86,6 +87,7 @@ export default function App() {
       <Router>
         <div className="min-h-screen bg-gray-50" style={{ paddingTop: 'var(--navbar-offset)' }}>
           <Navbar />
+          <ScrollToTop />
           <Routes>
             {/* <Route path="/" element={<Home />} />  // Temporary disabled Home */}
             {/* <Route path="/portfolio" element={<Portfolio />} /> */}
