@@ -26,24 +26,32 @@
   },
   "awards": [
     {
-      "award": "National Winner II",
-      "organization": "All India University Anveshan",
-      "date": "Feb 2024"
+      "organization": "Google",
+      "competition": "Immersive Geospatial Challenge",
+      "title": "Best AR Productivity & Business App",
+      "date": "Nov 2023",
+      "place": "🥇"
     },
     {
-      "award": "Winner - Best AR Productivity & Business App",
-      "organization": "Google’s Immersive Geospatial Challenge",
-      "date": "Nov 2023"
+      "organization": "All India University",
+      "competition": "Anveshan",
+      "title": "National Winner",
+      "date": "Feb 2024",
+      "place": "🥈"
     },
     {
-      "award": "Finalist",
-      "organization": "EY Techathon 3.0",
-      "date": "March 2023"
+      "organization": "EY",
+      "competition": "Techathon 3.0",
+      "title": "Finalist",
+      "date": "Mar 2023",
+      "place": "🏅"
     },
     {
-      "award": "International Winner",
-      "organization": "Microsoft PyGames",
-      "date": "May 2022"
+      "organization": "Microsoft",
+      "competition": "PyGames",
+      "title": "International Winner",
+      "date": "May 2022",
+      "place": "🏅"
     }
   ]
 }

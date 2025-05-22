@@ -17,17 +17,18 @@ const Footer = () => {
         <Box
           sx={{
             display: 'flex',
-            flexDirection: { xs: 'column', sm: 'row' },
             justifyContent: 'center',
-            alignItems: 'center',
           }}
         >
           <Box
             sx={{
               display: 'flex',
-              flexWrap: 'wrap',
-              justifyContent: 'center',
-              gap: 4,
+              flexWrap: { xs: 'wrap', sm: 'nowrap' },
+              justifyContent: { xs: 'space-between', sm: 'center' },
+              rowGap: { xs: 1.5, sm: 0 },
+              columnGap: 4,
+              width: '100%',
+              maxWidth: { sm: '100%', md: 600 }, 
             }}
           >
             {[
@@ -48,8 +49,8 @@ const Footer = () => {
                   fontSize: '0.85rem',
                   minWidth: 'auto',
                   padding: '6px 12px',
-                  borderRadius: 4,
-                  transition: 'filter 0.3s',
+                  borderRadius: 2,
+                  transition: 'filter hover 0.3s',
                   '&:hover': {
                     backgroundColor: 'rgb(255,255,255,0.4)',
                     color: 'rgba(0, 0, 0, 0.8)',

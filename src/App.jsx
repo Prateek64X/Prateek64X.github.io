@@ -73,22 +73,23 @@ const lightTheme = createTheme({
 export default function App() {
   return (
     <Box
-    sx={{
-      minHeight: '100vh',
-      backgroundImage: `url(${backgroundImg})`,
-      backgroundSize: 'cover',
-      backgroundRepeat: 'no-repeat',
-      backgroundPosition: 'top',
-    }}
-  >
+      sx={{
+        minHeight: '100vh',
+        backgroundImage: `url(${backgroundImg})`,
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'top',
+      }}
+    >
     <ThemeProvider theme={lightTheme}>
       <CssBaseline />
       <Router>
         <div className="min-h-screen bg-gray-50" style={{ paddingTop: 'var(--navbar-offset)' }}>
           <Navbar />
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/portfolio" element={<Portfolio />} />
+            {/* <Route path="/" element={<Home />} />  // Temporary disabled Home */}
+            {/* <Route path="/portfolio" element={<Portfolio />} /> */}
+            <Route path="/" element={<Portfolio />} />
             <Route path="/projects" element={<Projects />} />
           </Routes>
         </div>

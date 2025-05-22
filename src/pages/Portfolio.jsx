@@ -7,109 +7,122 @@ import Footer from '../components/Footer';
 import { Box, Container, Typography, Avatar, useTheme } from '@mui/material';
 
 
-const Section = ({ title, children, id }) => (
-  <Box 
-    id={id}
-    component="section" 
-    sx={{ 
-      py: { xs: 2, md: 2 },
-      borderBottom: '1px solid',
-      borderColor: 'divider',
-      '&:last-child': {
-        borderBottom: 'none'
-      }
-    }}
-  >
-    <Container maxWidth="lg" sx={{ pt: 2, pb: 4 }}>
+const Section = ({ title, children, id, hasBorder = true }) => (
+  <Box id={id} component="section" >
+    <Container 
+      maxWidth={false}
+      sx={{
+        width: '100%',
+        px: { xs: 2, sm: 4, md: 6 },
+        maxWidth: { md: '1200px' },
+        mx: 'auto',
+      }}
+    >
       {title && (
         <Typography 
           variant="h4" 
           component="h2" 
           fontWeight="bold" 
           gutterBottom
-          sx={{ mb: 4 }}
+          sx={{ mb: 2 }}
         >
           {title}
         </Typography>
       )}
       {children}
     </Container>
+    {hasBorder && (
+      <Box
+        maxWidth="lg"
+        sx={{
+          width: '50%',
+          borderBottom: '1px solid',
+          borderColor: 'divider',
+          mx: 'auto',
+          my: 3,
+        }}
+      />
+    )}
   </Box>
 );
+
 
 const Portfolio = () => {
   const theme = useTheme();
 
   return (
-    <Box sx={{ pt: 2 }}>
+    <Box>
       {/* Hero/About Section */}
       <Section id="about">
-        <Container maxWidth="lg" sx={{ 
-          display: 'flex',
-          justifyContent: 'center',
-          pt: 4,
-          ml: 2,
-        }}>
-          <Box sx={{ 
-            display: 'flex',
-            flexDirection: { xs: 'column', md: 'row' },
-            alignItems: 'center',
-            gap: 4,
-            maxWidth: '1200px',
-            width: '90%',
-            backdropFilter: 'blur(2px)',
-            borderRadius: 4,
-            px: 3,
-            py: -2,
-            mx: { xs: 'auto', md: 0 },
-          }}>
+        <Container 
+          maxWidth={false}
+          sx={{
+            width: '100%',
+            px: { xs: 2, sm: 4, md: 6 },
+            maxWidth: { md: '1200px' },
+            mx: 'auto',
+            mt: 2,
+          }}
+        >
+          <Box
+            sx={{
+              display: 'flex',
+              flexDirection: { xs: 'column', md: 'row' },
+              alignItems: 'center',
+              gap: 4,
+              p: { xs: 2, md: 2 },
+              backdropFilter: 'blur(2px)',
+              backgroundColor: 'rgba(234, 234, 234, 0.2)',
+              borderRadius: 4,
+              mx: 'auto',
+              maxWidth: '1200px',
+            }}
+          >
+            {/* Profile Image */}
             <Avatar
               src="../../public/images/ProfilePhoto.jpg"
-              sx={{ 
-                width: { xs: 120, md: 160 }, 
+              sx={{
+                width: { xs: 120, md: 160 },
                 height: { xs: 120, md: 160 },
                 border: `4px solid rgba(255, 255, 255, 0.2)`,
                 boxShadow: '0 10px 20px rgba(0, 0, 0, 0.1)',
-                flexShrink: 0
+                flexShrink: 0,
               }}
             />
-            
-            <Box sx={{ 
-              textAlign: { xs: 'center', md: 'left' },
-              flex: 1
-            }}>
-              <Typography variant="h4" component="h1" fontWeight="bold" marginBottom={'2pt'}>
+
+            {/* Text Content */}
+            <Box sx={{ textAlign: { xs: 'center', md: 'left' }, flex: 1 }}>
+              <Typography variant="h4" fontWeight="bold" mb={1}>
                 Prateek Panwar
               </Typography>
-              <Typography 
-                variant="h6" 
-                color="primary.main"
-                sx={{ 
+
+              <Typography
+                variant="h6"
+                sx={{
                   mb: 2,
                   background: `linear-gradient(45deg, ${theme.palette.primary.main}, ${theme.palette.secondary.main})`,
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
-                  display: 'inline-block'
+                  display: 'inline-block',
+                  fontWeight: 600,
                 }}
               >
-                Full-Stack Web Developer | AR/VR Experiences | Mobile Developer
+                Full-Stack Web Developer · AR/VR Enthusiast · Mobile App Developer
               </Typography>
-              
-              <Typography 
-                variant="body1" 
-                paragraph 
-                sx={{ 
-                  maxWidth: '700px',
+
+              <Typography
+                variant="body1"
+                sx={{
                   lineHeight: 1.8,
-                  fontSize: '1.1rem',
+                  fontSize: '1.05rem',
                   fontWeight: 500,
-                  mx: { xs: 'auto', md: 0 }
+                  maxWidth: '700px',
+                  mx: { xs: 'auto', md: 0 },
                 }}
               >
-                Hi, I’m skilled in building full‑stack web applications with React.js, Node.js and Java.
-                I enjoy creating immersive AR/VR and architectural visualizations using Unity 3D and Unreal Engine.
-                I also develop mobile applications using Flutter and Swift. My strength lies in integrating diverse technologies to build 
-                intuitive, scalable, and future-ready digital products.
+                Hi, I’m a full-stack developer experienced in React, Node.js, and Java.
+                I love building immersive AR/VR experiences with Unreal and Unity, and also develop mobile apps.<br/>
+                I specialize in integrating diverse technologies to create seamless, scalable solutions.
               </Typography>
             </Box>
           </Box>
@@ -128,7 +141,7 @@ const Portfolio = () => {
         <FeaturedProjects />
       </Section>
 
-      <Section title="Awards & Achievements" id="achievements">
+      <Section title="Awards & Achievements" id="achievements" hasBorder={false}>
         <AchievementsSection />
       </Section>
 

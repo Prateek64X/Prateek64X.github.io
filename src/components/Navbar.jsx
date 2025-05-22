@@ -44,7 +44,7 @@ export default function Navbar() {
 
   // Navbar links
   const links = [
-    { text: 'Home', icon: <HomeIcon /> },
+    // { text: 'Home', icon: <HomeIcon /> },  // Temporary disabled Home
     { text: 'Portfolio', icon: <DashboardCustomizeIcon /> },
     { text: 'Projects', icon: <DashboardCustomizeIcon /> },
   ];
@@ -64,7 +64,8 @@ export default function Navbar() {
       {/* Links */}
       <List>
         {links.map((link) => {
-          const path = link.text === 'Home' ? '/' : `/${link.text.toLowerCase()}`;
+          // const path = link.text === 'Home' ? '/' : `/${link.text.toLowerCase()}`; // Temporary disabled Home
+          const path = link.text === 'Portfolio' ? '/' : `/${link.text.toLowerCase()}`;
           const isActive = location.pathname === path;
 
           return (
@@ -123,7 +124,8 @@ export default function Navbar() {
             <Box sx={{ fontWeight: 'bold', color:'white' }}>My Portfolio - Prateek Panwar</Box>
             <Box>
               {links.map((link) => {
-                const path = link.text === 'Home' ? '/' : `/${link.text.toLowerCase()}`;
+                // const path = link.text === 'Home' ? '/' : `/${link.text.toLowerCase()}`; // Temporary disabled Home
+                const path = link.text === 'Portfolio' ? '/' : `/${link.text.toLowerCase()}`;
                 const isActive = location.pathname === path;
 
                 return (

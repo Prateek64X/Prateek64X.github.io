@@ -1,6 +1,6 @@
 [
     {
-      "name": "GeoViz (AR)",
+      "name": "GeoViz",
       "description": "AR app for collaborative architectural design and visualization, using Google Maps API and Google Cloud. Geospatial Creator Challenge - Most productive AR application.",
       "date": "2023-05",
       "images": [
@@ -16,7 +16,7 @@
       "featured": true
     },
     {
-      "name": "Digi Yoga (Unreal Engine)",
+      "name": "Digi Yoga",
       "description": "VR yoga app with body tracking, multiplayer yoga sessions, and digital avatars performing in virtual environments.",
       "date": "2023-08",
       "images": [
@@ -33,7 +33,7 @@
       "featured": true
     },
     {
-      "name": "Sky Runner (Unity 3D)",
+      "name": "Sky Runner",
       "description": "3D FPS mobile apps platform game inspired from Tron Legacy. Contributed to level design and programming gameplay mechanics.",
       "date": "2023-02",
       "images": [
@@ -45,7 +45,7 @@
       "video": "https://www.youtube.com/watch?v=KotqxfErzA4"
     },
     {
-      "name": "Squares (Unity 3D)",
+      "name": "Squares",
       "description": "2D multiplayer tile game. Developed gameplay mechanics, multiplayer functionality and assets.",
       "date": "2022-11",
       "images": [
@@ -57,7 +57,7 @@
       "tags": ["Games", "Mobile Apps"]
     },
     {
-      "name": "TeamGlobe (Flutter)",
+      "name": "TeamGlobe",
       "description": "Developed games to help reach Global Sustainability Goals using Flutter.",
       "date": "2023-10",
       "images": [

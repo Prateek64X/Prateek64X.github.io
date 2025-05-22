@@ -19,6 +19,8 @@ const ExperienceSection = () => {
         <Timeline 
           position="right" 
           sx={{
+            mt: 2,
+            mb: 0,
             // Remove default padding before content
             '& .MuiTimelineItem-root:before': {
               flex: 0,

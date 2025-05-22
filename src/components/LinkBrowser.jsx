@@ -91,8 +91,16 @@ export default function LinkBrowser() {
       <Box
         onClick={(e) => e.stopPropagation()}
         sx={{
-          width: '70vw',
-          height: '84.4vh',
+          width: {
+            xs: '95vw',
+            sm: '95vw',
+            md: '70vw',
+          },
+          height: {
+            xs: '95vh',
+            sm: '95vh',
+            md: '84.4vh',
+          },
           background: 'rgba(255, 255, 255, 0.15)',
           backdropFilter: 'blur(10px)',
           borderRadius: 3,
@@ -107,8 +115,8 @@ export default function LinkBrowser() {
         <Box
           sx={{
             position: 'absolute',
-            top: 12,
-            right: 12,
+            top: 8,
+            right: 8,
             zIndex: 10,
             display: 'flex',
             gap: 1,
@@ -125,7 +133,7 @@ export default function LinkBrowser() {
           </IconButton>
         </Box>
 
-        <Box sx={{ flex: 1, mt: 8 }}>
+        <Box sx={{ flex: 1, mt: 7 }}>
           <iframe
             src={getEmbedUrl(link)}
             style={{ width: '100%', height: '100%', border: 'none' }}
