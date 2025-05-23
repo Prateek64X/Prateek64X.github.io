@@ -102,7 +102,7 @@ export default function LinkBrowser() {
             md: '84.4vh',
           },
           background: 'rgba(255, 255, 255, 0.15)',
-          backdropFilter: 'blur(10px)',
+          backdropFilter: 'blur(8px)',
           borderRadius: 3,
           position: 'relative',
           boxShadow: 4,

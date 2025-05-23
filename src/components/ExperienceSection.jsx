@@ -52,12 +52,11 @@ const ExperienceSection = () => {
                     p: 2, 
                     borderRadius: 4,
                     width: '100%',
-                    backgroundColor: 'rgba(255, 255, 255, 0.6)',
-                    backdropFilter: 'blur(24px)',
+                    backgroundColor: "rgba(244, 244, 244, 0.98)",
                     boxShadow: '0 10px 20px rgba(0, 0, 0, 0.1)',
                     transition: 'background-color 0.3s ease',
                     '&:hover': {
-                      backgroundColor: 'rgba(255, 255, 255, 0.8)',
+                      backgroundColor: "rgba(255, 255, 255, 1)",
                     },
                   }}
                 >

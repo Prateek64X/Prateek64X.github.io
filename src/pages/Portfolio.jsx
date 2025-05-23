@@ -6,7 +6,6 @@ import { FeaturedProjects } from '../components/ProjectCard';
 import Footer from '../components/Footer';
 import { Box, Container, Typography, Avatar, useTheme } from '@mui/material';
 
-
 const Section = ({ title, children, id, hasBorder = true }) => (
   <Box id={id} component="section" >
     <Container 
@@ -20,11 +19,21 @@ const Section = ({ title, children, id, hasBorder = true }) => (
     >
       {title && (
         <Typography 
-          variant="h4" 
           component="h2" 
           fontWeight="bold" 
           gutterBottom
-          sx={{ mb: 2 }}
+          sx={{ 
+            mb: 2,
+            fontSize: '2.6rem',
+            color: 'rgb(20,20,20)',
+            lineHeight: 1.2,
+            textShadow: `
+              2px 2px 0 rgba(234,234,234,0.6),
+              -2px -2px 0 rgba(234,234,234,0.6),
+              2px -2px 0 rgba(234,234,234,0.6),
+              -2px 2px 0 rgba(234,234,234,0.6)
+            `
+          }}
         >
           {title}
         </Typography>
@@ -72,7 +81,7 @@ const Portfolio = () => {
               gap: 4,
               p: { xs: 2, md: 2 },
               backdropFilter: 'blur(2px)',
-              backgroundColor: 'rgba(234, 234, 234, 0.2)',
+              backgroundColor: 'rgba(234, 234, 234, 0.6)',
               borderRadius: 4,
               mx: 'auto',
               maxWidth: '1200px',
@@ -80,7 +89,7 @@ const Portfolio = () => {
           >
             {/* Profile Image */}
             <Avatar
-              src="/images/ProfilePhoto.jpg"
+              src="/images/ProfilePhoto.webp"
               sx={{
                 width: { xs: 120, md: 160 },
                 height: { xs: 120, md: 160 },

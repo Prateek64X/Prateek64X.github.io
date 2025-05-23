@@ -8,7 +8,7 @@ const Footer = () => {
       sx={{
         py: 2,
         px: 2,
-        backdropFilter: 'blur(24px)',
+        backdropFilter: 'blur(16px)',
         backgroundColor: 'rgba(207, 207, 207, 0.25)',
         boxShadow: '0 -4px 20px rgba(0, 0, 0, 0.05)',
       }}

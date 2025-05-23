@@ -113,7 +113,7 @@ export default function Navbar() {
             top: 20,
             left: '50%',
             borderRadius: '30px',
-            backdropFilter: 'blur(20px)',
+            backdropFilter: 'saturate(150%) blur(8px)',
             backgroundColor: 'rgba(0, 0, 0, 0.3)',
             border: '1px solid rgba(255, 255, 255, 0.1)',
             width: '90%',
@@ -162,8 +162,8 @@ export default function Navbar() {
               top: 20,
               left: 20,
               zIndex: 1400,
-              bgcolor: 'rgba(0, 0, 0, 0.3)',
-              backdropFilter: 'blur(10px)',
+              backdropFilter: "saturate(150%) blur(4px)",
+              bgcolor: !drawerOpen ? 'rgba(163, 163, 163, 0.6)' : 'rgba(55, 55, 55, 0.8)',
               borderRadius: '50%',
               p: 1.5,
               opacity: (!showFullNav || isMobile) ? 1 : 0,
@@ -171,7 +171,7 @@ export default function Navbar() {
               transition: 'opacity 300ms ease, transform 300ms ease',
               pointerEvents: (!showFullNav || isMobile) ? 'auto' : 'none',
               '&:hover': {
-                bgcolor: 'rgba(0, 0, 0, 0.15)',
+                bgcolor: !drawerOpen ? 'rgb(163, 163, 163)' : 'rgb(55, 55, 55)',
               },
             }}
           >
@@ -185,8 +185,8 @@ export default function Navbar() {
             onClose={() => setDrawerOpen(false)}
             PaperProps={{
               sx: {
-                bgcolor: 'rgba(0, 0, 0, 0.3)', // Consistent grey translucent background
-                backdropFilter: 'blur(20px)',  // Glass effect
+                bgcolor: 'rgba(0, 0, 0, 0.4)', // Consistent grey translucent background
+                backdropFilter: 'saturate(150%) blur(20px)',
                 color: 'white',
                 borderRadius: '20px',
                 width: 300,

@@ -12,7 +12,7 @@ const AchievementCard = ({ award }) => {
       <Box sx={{ position: 'relative', width: 200, height: 200 }}>
         <Box
           component="img"
-          src="/icons/trophy_512.png"
+          src="/icons/trophy_512.webp"
           alt="Trophy"
           sx={{ width: '100%', height: '100%', objectFit: 'contain' }}
         />
@@ -185,11 +185,11 @@ const AchievementsSection = () => {
                 display: 'flex',
                 justifyContent: 'space-between',
                 alignItems: 'center',
+                px: 2,
                 position: 'absolute',
                 top: '30%',
                 left: 0,
                 right: 0,
-                px: 1,
                 zIndex: 3,
                 pointerEvents: 'none',
               }}
@@ -198,16 +198,15 @@ const AchievementsSection = () => {
                 onClick={() => handleSlide('prev')}
                 sx={{
                   pointerEvents: isAnimating ? 'none' : 'auto',
-                  backdropFilter: 'blur(8px)',
-                  backgroundColor: 'rgba(245, 212, 129, 0.05)',
-                  color: '#f5d481',
+                  backgroundColor: 'rgba(247, 218, 146, 0.3)',
+                  color: 'rgb(235, 201, 116)',
                   border: '1px solid rgba(255,255,255,0.1)',
                   borderRadius: '50%',
-                  width: 40,
-                  height: 40,
+                  width: 50,
+                  height: 50,
                   transition: '0.2s ease',
                   '&:hover': {
-                    backgroundColor: 'rgba(240, 205, 117, 0.1)',
+                    backgroundColor: 'rgba(247, 218, 146, 0.5)',
                     border: "1px solid rgba(235, 190, 78, 0.45)",
                   },
                 }}
@@ -219,16 +218,15 @@ const AchievementsSection = () => {
                 onClick={() => handleSlide('next')}
                 sx={{
                   pointerEvents: isAnimating ? 'none' : 'auto',
-                  backdropFilter: 'blur(8px)',
-                  backgroundColor: 'rgba(245, 212, 129, 0.05)',
-                  color: '#f5d481',
+                  backgroundColor: 'rgba(247, 218, 146, 0.3)',
+                  color: 'rgb(235, 201, 116)',
                   border: '1px solid rgba(255,255,255,0.1)',
                   borderRadius: '50%',
-                  width: 40,
-                  height: 40,
+                  width: 50,
+                  height: 50,
                   transition: '0.2s ease',
                   '&:hover': {
-                    backgroundColor: 'rgba(240, 205, 117, 0.1)',
+                    backgroundColor: 'rgba(247, 218, 146, 0.5)',
                     border: "1px solid rgba(235, 190, 78, 0.45)",
                   },
                 }}
@@ -281,13 +279,15 @@ const AchievementsSection = () => {
       >
         <Box
           component="img"
-          src="/icons/wooden_base.png"
+          src="/icons/wooden_base.webp"
           alt="Wooden Base"
           sx={{
             width: '100%',
             height: '100%',
             objectFit: 'cover',
             display: 'block',
+            boxShadow: '0px -50px 0px rgba(0, 0, 0, 1)', 
+            borderRadius: '4px'
           }}
         />
       </Box>

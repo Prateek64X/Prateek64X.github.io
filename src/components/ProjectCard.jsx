@@ -31,8 +31,7 @@ export default function ProjectCard({ project }) {
   return (
     <Card
       sx={{
-        backdropFilter: "blur(24px)",
-        backgroundColor: "rgba(255, 255, 255, 0.6)",
+        backgroundColor: "rgba(244, 244, 244, 0.98)",
         borderRadius: 4,
         overflow: "hidden",
         boxShadow: "none",
@@ -47,7 +46,7 @@ export default function ProjectCard({ project }) {
         "&:hover": {
           transform: "translateY(-4px)",
           boxShadow: "0 10px 20px rgba(0, 0, 0, 0.1)",
-          backgroundColor: "rgba(255, 255, 255, 0.8)",
+          backgroundColor: "rgba(255, 255, 255, 1)",
           borderColor: "rgba(0, 0, 0, 0.2)",
         },
       }}
@@ -98,7 +97,7 @@ export default function ProjectCard({ project }) {
                 position: "absolute",
                 bottom: 8,
                 right: 8,
-                backdropFilter: "blur(15px)",
+                backdropFilter: "blur(2px)",
                 backgroundColor: "rgba(40, 40, 40, 0.3)",
                 color: "white",
                 borderRadius: "12px",
@@ -267,14 +266,14 @@ export function FeaturedCard({ project }) {
         my: 2,
         borderRadius: 4,
         overflow: "hidden",
-        backdropFilter: "blur(24px)",
-        backgroundColor: "rgba(255,255,255,0.6)",
+        backgroundColor: "rgba(244, 244, 244, 0.98)",
         boxShadow: "none",
         border: "1px solid rgba(100, 100, 100, 0.1)",
         transition: "all 0.3s ease",
         "&:hover": {
           transform: "translateY(-2px)",
           boxShadow: "0 6px 12px rgba(0,0,0,0.1)",
+          backgroundColor: "rgba(255, 255, 255, 1)",
         },
       }}
     >
@@ -344,7 +343,7 @@ export function FeaturedCard({ project }) {
                 position: "absolute",
                 bottom: 12,
                 right: 6,
-                backdropFilter: 'blur(15px)',
+                backdropFilter: 'blur(2px)',
                 backgroundColor: 'rgba(40, 40, 40, 0.3)',
                 color: "white",
                 borderRadius: "12px",
@@ -544,9 +543,8 @@ export function FeaturedProjects() {
             onClick={() => handleSlide("prev")}
             sx={{
               pointerEvents: isAnimating ? "none" : "auto",
-              backdropFilter: "blur(8px)",
-              WebkitBackdropFilter: "blur(6px)",
-              backgroundColor: "rgba(180, 220, 255, 0.12)",
+              backdropFilter: "saturate(150%) blur(4px)",
+              backgroundColor: "rgba(161, 211, 255, 0.2)",
               color: "#7ab2e9",
               border: "1px solid rgba(255, 255, 255, 0.1)",
               borderRadius: "50%",
@@ -555,8 +553,8 @@ export function FeaturedProjects() {
               ml: { md: 1 },
               transition: "all 0.2s ease",
               "&:hover": {
-                backgroundColor: "rgba(180, 220, 255, 0.2)",
-                border: "1px solid rgba(122, 178, 233, 0.35)",
+                backgroundColor: "rgba(194, 227, 255, 0.5)",
+                border: "2px solid rgba(140, 190, 240, 0.2)",
               },
             }}
           >
@@ -567,19 +565,18 @@ export function FeaturedProjects() {
             onClick={() => handleSlide("next")}
             sx={{
               pointerEvents: isAnimating ? "none" : "auto",
-              backdropFilter: "blur(8px)",
-              WebkitBackdropFilter: "blur(6px)",
-              backgroundColor: "rgba(180, 220, 255, 0.12)",
+              backdropFilter: "blur(2px)",
+              backgroundColor: "rgba(161, 211, 255, 0.2)",
               color: "#7ab2e9",
               border: "1px solid rgba(255, 255, 255, 0.1)",
               borderRadius: "50%",
               width: 50,
               height: 50,
-              mr: { md: 1 },
+              ml: { md: 1 },
               transition: "all 0.2s ease",
               "&:hover": {
-                backgroundColor: "rgba(180, 220, 255, 0.2)",
-                border: "1px solid rgba(122, 178, 233, 0.35)",
+                backgroundColor: "rgba(194, 227, 255, 0.5)",
+                border: "2px solid rgba(140, 190, 240, 0.2)",
               },
             }}
           >

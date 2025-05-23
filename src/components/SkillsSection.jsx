@@ -18,18 +18,18 @@ const SkillsSection = () => {
       : skillsData.skills[selectedCategory];
 
   return (
-    <Box>
+    <Box sx={{ transition: 'all 0.3s ease', }}>
       <Tabs
         value={selectedCategory}
         onChange={handleChange}
         variant="scrollable"
         scrollButtons="auto"
         sx={{
-          backdropFilter: 'blur(15px)',
+          backdropFilter: 'blur(12px)',
           backgroundColor: 'rgba(207, 207, 207, 0.25)',
           borderRadius: '30px',
           mb: 2,
-          px: 1.5,
+          px: 0.5,
           py: 0.5,
           width: 'fit-content',
           mx: 'auto',
@@ -41,7 +41,7 @@ const SkillsSection = () => {
             fontWeight: 'bold',
             textTransform: 'none',
             fontSize: { xs: '0.75rem', sm: '0.875rem' },
-            padding: { xs: '6px 14px', sm: '8px 18px' },
+            padding: { xs: '6px 18px', sm: '8px 20px' },
             borderRadius: '30px',
             transition: 'all 0.2s ease',
             '&:hover': {
@@ -62,7 +62,7 @@ const SkillsSection = () => {
         }}
       >
         {categories.map((category) => (
-          <Tab key={category} label={category} value={category} />
+          <Tab key={category} label={category} value={category}/>
         ))}
       </Tabs>
 
@@ -84,8 +84,7 @@ const SkillsSection = () => {
             >
               <Box
                 sx={{
-                  backgroundColor: 'rgba(255, 255, 255, 0.6)',
-                  backdropFilter: 'blur(10px)',
+                  backgroundColor: 'rgba(244, 244, 244, 0.95)',
                   borderRadius: '50%',
                   width: 90,
                   height: 90,
@@ -98,7 +97,7 @@ const SkillsSection = () => {
                   transition: 'all 0.3s ease',
                   '&:hover': {
                     transform: 'scale(1.05)',
-                    backgroundColor: 'rgba(255, 255, 255, 0.8)',
+                    backgroundColor: 'rgba(255, 255, 255, 1)',
                     boxShadow: '0 6px 12px rgba(0,0,0,0.15)',
                   },
                 }}

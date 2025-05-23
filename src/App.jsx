@@ -8,7 +8,7 @@ import Projects from './pages/Projects';
 import { Box } from '@mui/material';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
-import backgroundImg from '/images/background.jpg';
+import backgroundImg from '/images/background.webp';
 
 const lightTheme = createTheme({
   palette: {
@@ -39,7 +39,6 @@ const lightTheme = createTheme({
           margin: '2pt',
         },
         contained: {
-          backdropFilter: 'blur(10px)',
           boxShadow: '0 4px 10px rgba(0, 0, 0, 0.1)',
           border: '1px solid rgba(255, 255, 255, 0.2)',
           backgroundColor: 'rgba(255, 255, 255, 0.12)',

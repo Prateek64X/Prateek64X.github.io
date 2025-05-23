@@ -4,10 +4,10 @@
       "description": "AR app for collaborative architectural design and visualization, using Google Maps API and Google Cloud. Geospatial Creator Challenge - Most productive AR application.",
       "date": "2023-05",
       "images": [
-        "/images/geoviz1.jpg",
-        "/images/geoviz2.jpg",
-        "/images/geoviz3.jpg",
-        "/images/geoviz4.jpg"
+        "/images/geoviz1.webp",
+        "/images/geoviz2.webp",
+        "/images/geoviz3.webp",
+        "/images/geoviz4.webp"
       ],
       "technologies": ["Unity", "Google Maps", "Google Cloud"],
       "tags": ["AR/VR", "Tools"],
@@ -20,10 +20,10 @@
       "description": "VR yoga app with body tracking, multiplayer yoga sessions, and digital avatars performing in virtual environments.",
       "date": "2023-08",
       "images": [
-        "/images/digiyoga1.jpg",
-        "/images/digiyoga2.jpg",
-        "/images/digiyoga3.jpg",
-        "/images/digiyoga4.jpg"
+        "/images/digiyoga1.webp",
+        "/images/digiyoga2.webp",
+        "/images/digiyoga3.webp",
+        "/images/digiyoga4.webp"
       ],
       "technologies": ["Unreal", "VR"],
       "tags": ["AR/VR", "Tools", "Games"],
@@ -37,8 +37,8 @@
       "description": "3D FPS mobile apps platform game inspired from Tron Legacy. Contributed to level design and programming gameplay mechanics.",
       "date": "2023-02",
       "images": [
-        "/images/skyrunner1.jpg",
-        "/images/skyrunner2.jpg"
+        "/images/skyrunner1.webp",
+        "/images/skyrunner2.webp"
       ],
       "technologies": ["Unity", "Blender", "C#"],
       "tags": ["Games", "Mobile Apps"],
@@ -49,9 +49,9 @@
       "description": "2D multiplayer tile game. Developed gameplay mechanics, multiplayer functionality and assets.",
       "date": "2022-11",
       "images": [
-        "/images/squares1.jpg",
-        "/images/squares2.jpg",
-        "/images/squares3.jpg"
+        "/images/squares1.webp",
+        "/images/squares2.webp",
+        "/images/squares3.webp"
       ],
       "technologies": ["Unity", "After Effects"],
       "tags": ["Games", "Mobile Apps"]
@@ -61,10 +61,10 @@
       "description": "Developed games to help reach Global Sustainability Goals using Flutter.",
       "date": "2023-10",
       "images": [
-        "/images/teamglobe1.jpg",
-        "/images/teamglobe2.jpg",
-        "/images/teamglobe3.jpg",
-        "/images/teamglobe4.jpg"
+        "/images/teamglobe1.webp",
+        "/images/teamglobe2.webp",
+        "/images/teamglobe3.webp",
+        "/images/teamglobe4.webp"
       ],
       "technologies": ["Flutter", "Unity"],
       "tags": ["Games", "Mobile Apps"],
@@ -77,9 +77,9 @@
       "description": "Unified university events in one app. Track upcoming events, star and join events in-app. Boosting students participation and campus engagement.",
       "date": "2023-10",
       "images": [
-        "/images/eventassistant1.jpg",
-        "/images/eventassistant2.jpg",
-        "/images/eventassistant3.jpg"
+        "/images/eventassistant1.webp",
+        "/images/eventassistant2.webp",
+        "/images/eventassistant3.webp"
       ],
       "technologies": ["Flutter", "Xcode"],
       "tags": ["Mobile Apps"],
