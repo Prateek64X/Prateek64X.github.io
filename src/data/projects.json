@@ -1,5 +1,20 @@
 [
     {
+      "name": "Room Rent App",
+      "description": "Helps you manage multiple room rents and tenants easily.",
+      "date": "2023-05",
+      "images": [
+        "/images/room-rent1.png",
+        "/images/room-rent2.png",
+        "/images/room-rent3.png",
+        "/images/room-rent4.png"
+      ],
+      "technologies": ["React Js", "Express Js", "Vercel"],
+      "tags": ["Website", "Tools"],
+      "link": "https://nest-app-ecru.vercel.app/",
+      "featured": true
+    },
+    {
       "name": "GeoViz",
       "description": "AR app for collaborative architectural design and visualization, using Google Maps API and Google Cloud. Geospatial Creator Challenge - Most productive AR application.",
       "date": "2023-05",
@@ -57,6 +72,20 @@
       "tags": ["Games", "Mobile Apps"]
     },
     {
+      "name": "Event Assistant",
+      "description": "Unified university events in one app. Track upcoming events, star and join events in-app. Boosting students participation and campus engagement.",
+      "date": "2023-10",
+      "images": [
+        "/images/eventassistant1.webp",
+        "/images/eventassistant2.webp",
+        "/images/eventassistant3.webp"
+      ],
+      "technologies": ["Flutter", "Xcode"],
+      "tags": ["Mobile Apps"],
+      "link": "https://www.canva.com/design/DAGndEWQ_m8/mS3rSIW3P38ndY1j02PFZg/edit?utm_content=DAGndEWQ_m8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
+      "featured": true
+    },
+    {
       "name": "TeamGlobe",
       "description": "Developed games to help reach Global Sustainability Goals using Flutter.",
       "date": "2023-10",
@@ -70,20 +99,6 @@
       "tags": ["Games", "Mobile Apps"],
       "link": "https://devpost.com/software/teamglobe",
       "video": "https://www.youtube.com/watch?v=M_nln8Et7JA",
-      "featured": true
-    },
-    {
-      "name": "Event Assistant",
-      "description": "Unified university events in one app. Track upcoming events, star and join events in-app. Boosting students participation and campus engagement.",
-      "date": "2023-10",
-      "images": [
-        "/images/eventassistant1.webp",
-        "/images/eventassistant2.webp",
-        "/images/eventassistant3.webp"
-      ],
-      "technologies": ["Flutter", "Xcode"],
-      "tags": ["Mobile Apps"],
-      "link": "https://www.canva.com/design/DAGndEWQ_m8/mS3rSIW3P38ndY1j02PFZg/edit?utm_content=DAGndEWQ_m8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
       "featured": true
     }
   ]
