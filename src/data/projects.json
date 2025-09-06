@@ -1,8 +1,36 @@
 [
     {
+      "name": "Telis",
+      "description": "Quickly and safely exchange ERC-20 and Solana tokens.",
+      "date": "2025-08",
+      "images": [
+        "/images/telis-1.webp",
+        "/images/telis-2.webp",
+        "/images/telis-3.webp"
+      ],
+      "technologies": ["Next Js", "Aptos", "Azure", "Blockchain", "Vercel"],
+      "tags": ["Website", "Web3"],
+      "link": "https://swap-xd-2.vercel.app/",
+      "featured": true
+    },
+    {
+      "name": "Digi Voter",
+      "description": "Lets users prove their identity and vote publicly, secured by blockchain.",
+      "date": "2025-06",
+      "images": [
+        "/images/digivoter-1.webp",
+        "/images/digivoter-2.webp",
+        "/images/digivoter-3.webp"
+      ],
+      "technologies": ["Next Js", "Aptos", "Blockchain", "Vercel"],
+      "tags": ["Website", "Web3"],
+      "link": "https://digivoter.org/",
+      "featured": false
+    },
+    {
       "name": "Room Rent App",
       "description": "Helps you manage multiple room rents and tenants easily.",
-      "date": "2023-05",
+      "date": "2025-05",
       "images": [
         "/images/room-rent1.png",
         "/images/room-rent2.png",
@@ -99,6 +127,6 @@
       "tags": ["Games", "Mobile Apps"],
       "link": "https://devpost.com/software/teamglobe",
       "video": "https://www.youtube.com/watch?v=M_nln8Et7JA",
-      "featured": true
+      "featured": false
     }
   ]
